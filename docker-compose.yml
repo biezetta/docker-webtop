@@ -2,7 +2,6 @@ version: "3.9"
 services:
   nox:
     image: linuxserver/webtop:ubuntu-xfce
-    user: 0
     container_name: nox
     privileged: true #optional
     security_opt:
@@ -11,8 +10,6 @@ services:
       - PUID=0
       - PGID=0
       - TZ=Asia/Jakarta
-      - CUSTOM_USER=root
-      - PASSWORD=12345
       - AUTO_LOGIN=false
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock #optional
@@ -22,7 +19,6 @@ services:
     restart: unless-stopped
   alp:
     image: linuxserver/webtop:fedora-xfce
-    user: 0
     container_name: alp
     privileged: true #optional
     security_opt:
@@ -31,8 +27,6 @@ services:
       - PUID=0
       - PGID=0
       - TZ=Asia/Jakarta
-      - CUSTOM_USER=root
-      - PASSWORD=12345
       - AUTO_LOGIN=false
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock #optional
@@ -42,7 +36,6 @@ services:
     restart: unless-stopped
   arch:
     image: linuxserver/webtop:arch-xfce
-    user: 0
     container_name: arch
     privileged: true #optional
     security_opt:
@@ -51,8 +44,6 @@ services:
       - PUID=0
       - PGID=0
       - TZ=Asia/Jakarta
-      - CUSTOM_USER=root
-      - PASSWORD=12345
       - AUTO_LOGIN=false
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock #optional
@@ -62,7 +53,6 @@ services:
     restart: unless-stopped
   openbox:
     image: linuxserver/webtop:ubuntu-openbox
-    user: 0
     container_name: openbox
     privileged: true #optional
     security_opt:
@@ -71,8 +61,6 @@ services:
       - PUID=0
       - PGID=0
       - TZ=Asia/Jakarta
-      - CUSTOM_USER=root
-      - PASSWORD=12345
       - AUTO_LOGIN=false
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock #optional
@@ -91,8 +79,6 @@ services:
       - PUID=0
       - PGID=0
       - TZ=Asia/Jakarta
-      - CUSTOM_USER=root
-      - PASSWORD=12345
       - AUTO_LOGIN=false
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock #optional
