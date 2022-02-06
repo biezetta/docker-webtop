@@ -1,0 +1,97 @@
+version: "3.9"
+services:
+  nox:
+    image: linuxserver/webtop:ubuntu-xfce
+    user: 0
+    container_name: nox
+    privileged: true #optional
+    security_opt:
+      - seccomp:unconfined #optional
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Asia/Jakarta
+      - CUSTOM_USER=root
+      - PASSWORD=12345
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock #optional
+    ports:
+      - 3000:3000
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+  alp:
+    image: linuxserver/webtop:fedora-xfce
+    user: 0
+    container_name: alp
+    privileged: true #optional
+    security_opt:
+      - seccomp:unconfined #optional
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Asia/Jakarta
+      - CUSTOM_USER=root
+      - PASSWORD=12345
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock #optional
+    ports:
+      - 3000:3000
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+  arch:
+    image: linuxserver/webtop:arch-xfce
+    user: 0
+    container_name: arch
+    privileged: true #optional
+    security_opt:
+      - seccomp:unconfined #optional
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Asia/Jakarta
+      - CUSTOM_USER=root
+      - PASSWORD=12345
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock #optional
+    ports:
+      - 3000:3000
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+  openbox:
+    image: linuxserver/webtop:ubuntu-openbox
+    user: 0
+    container_name: openbox
+    privileged: true #optional
+    security_opt:
+      - seccomp:unconfined #optional
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Asia/Jakarta
+      - CUSTOM_USER=root
+      - PASSWORD=12345
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock #optional
+    ports:
+      - 3000:3000
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+  icewm:
+    image: linuxserver/webtop:ubuntu-icewm
+    user: 0
+    container_name: icewm
+    privileged: true #optional
+    security_opt:
+      - seccomp:unconfined #optional
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Asia/Jakarta
+      - CUSTOM_USER=root
+      - PASSWORD=12345
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock #optional
+    ports:
+      - 3000:3000
+    shm_size: "1gb" #optional
+    restart: unless-stopped
