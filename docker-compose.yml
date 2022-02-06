@@ -13,6 +13,7 @@ services:
       - TZ=Asia/Jakarta
       - CUSTOM_USER=root
       - PASSWORD=12345
+      - AUTO_LOGIN=false
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock #optional
     ports:
@@ -32,6 +33,7 @@ services:
       - TZ=Asia/Jakarta
       - CUSTOM_USER=root
       - PASSWORD=12345
+      - AUTO_LOGIN=false
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock #optional
     ports:
@@ -51,6 +53,7 @@ services:
       - TZ=Asia/Jakarta
       - CUSTOM_USER=root
       - PASSWORD=12345
+      - AUTO_LOGIN=false
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock #optional
     ports:
@@ -70,6 +73,7 @@ services:
       - TZ=Asia/Jakarta
       - CUSTOM_USER=root
       - PASSWORD=12345
+      - AUTO_LOGIN=false
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock #optional
     ports:
@@ -89,6 +93,7 @@ services:
       - TZ=Asia/Jakarta
       - CUSTOM_USER=root
       - PASSWORD=12345
+      - AUTO_LOGIN=false
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock #optional
     ports:
